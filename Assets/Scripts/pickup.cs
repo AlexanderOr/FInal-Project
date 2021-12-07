@@ -15,14 +15,19 @@ public class pickup : MonoBehaviour
     {
 
         //On interact with object named Key , the object is destroyed
+        if (other.gameObject.name != "heart_case")
+            if (other.gameObject.name != "heart_case (1)")
+                if (other.gameObject.name != "heart_case (2)")
+                {
+                        Destroy(other.gameObject);
 
-            Destroy(other.gameObject);
-
-            //marks key as held
-            collected = collected + 1;
-            pickupText.text = collected + " / " + levelRec;
+                        //marks key as held
+                        collected = collected + 1;
+                       pickupText.text = collected + " / " + levelRec;
         
-        win();
+                       win();
+                }
+ 
     }
     public void win()
     {
