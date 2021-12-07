@@ -12,8 +12,8 @@ public class ToxicSlime : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-
-        damage.HP--;
+        if (other.gameObject.name == "robotHunter")
+            damage.HP--;
 
 
         //Vector3 audioSpawnpoint = other.transform.position;

@@ -13,14 +13,15 @@ public class pickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+
         //On interact with object named Key , the object is destroyed
 
-        Destroy(other.gameObject);
+            Destroy(other.gameObject);
 
-        //marks key as held
-        collected = collected + 1;
-        pickupText.text = collected + " / 5";
+            //marks key as held
+            collected = collected + 1;
+            pickupText.text = collected + " / " + levelRec;
+        
         win();
     }
     public void win()
