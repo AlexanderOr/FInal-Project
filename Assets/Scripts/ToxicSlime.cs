@@ -1,17 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ToxicSlime : MonoBehaviour
 {
-    public string name;
-    public GameObject hitsound;
+
+    //public GameObject hitsound;
+    public health damage;
 
     private void OnTriggerEnter(Collider other)
     {
-        Vector3 audioSpawnpoint = other.transform.position;
-        Instantiate(hitsound, audioSpawnpoint, Quaternion.identity);
+
+
+        damage.HP--;
+
+
+        //Vector3 audioSpawnpoint = other.transform.position;
+        //Instantiate(hitsound, audioSpawnpoint, Quaternion.identity);
 
 
         //Destroy() is the base function for destroying components and objects in a scene
@@ -22,8 +28,6 @@ public class ToxicSlime : MonoBehaviour
 
         //Destroy(other.gameObject);
 
-
-        SceneManager.LoadScene(name);
 
     }
 
