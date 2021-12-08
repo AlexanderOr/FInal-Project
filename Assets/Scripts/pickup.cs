@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class pickup : MonoBehaviour
 {
-    
+
+    public GameObject pickupsound;
     int collected = 0;
     public GameObject winExit;
     public int levelRec = 10;
@@ -23,8 +24,12 @@ public class pickup : MonoBehaviour
                 {
                         Destroy(other.gameObject);
 
-                        //marks key as held
-                        collected = collected + 1;
+
+                    Vector3 audioSpawnpoint = other.transform.position;
+                    Instantiate(pickupsound, audioSpawnpoint, Quaternion.identity);
+
+                    //marks key as held
+                    collected = collected + 1;
                        pickupText.text = collected + " / " + levelRec;
         
                        win();

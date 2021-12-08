@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class enemyAI : MonoBehaviour
 {
     public NavMeshAgent agent;
-
+    public GameObject hitsound;
     public Transform Player;
     public LayerMask whatIsGround, whatIsPlayer;
     public health playerHealth;
@@ -89,6 +89,8 @@ public class enemyAI : MonoBehaviour
         {
             //attack code
             playerHealth.HP--;
+            Vector3 audioSpawnpoint = Player.position;
+            Instantiate(hitsound, audioSpawnpoint, Quaternion.identity);
 
 
             alreadyattacked = true;
