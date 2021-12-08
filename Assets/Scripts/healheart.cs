@@ -4,29 +4,32 @@ using UnityEngine;
 
 public class healheart : MonoBehaviour
 {
-    
+
     public health HpUp;
 
-
+    
     private void OnTriggerEnter(Collider other)
     {
-        
+        if (HpUp.HP < 5)
+        {
 
-        //On interact with object named Key , the object is destroyed
-        if (other.gameObject.name == "heart_case")
-        {
-            Destroy(other.gameObject);
-            HpUp.HP++;
-        }
-        if (other.gameObject.name == "heart_case (1)")
-        {
-            HpUp.HP++;
-            Destroy(other.gameObject);
-        }
-        if (other.gameObject.name == "heart_case (2)")
-        {
-            HpUp.HP++;
-            Destroy(other.gameObject);
+
+            //On interact with object named Key , the object is destroyed
+            if (other.gameObject.name == "heart_case")
+            {
+                Destroy(other.gameObject);
+                HpUp.HP++;
+            }
+            if (other.gameObject.name == "heart_case (1)")
+            {
+                HpUp.HP++;
+                Destroy(other.gameObject);
+            }
+            if (other.gameObject.name == "heart_case (2)")
+            {
+                HpUp.HP++;
+                Destroy(other.gameObject);
+            }
         }
     }
 }
