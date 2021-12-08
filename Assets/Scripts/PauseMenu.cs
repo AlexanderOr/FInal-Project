@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 {
     bool isPaused = false;
     public GameObject pauseUI;
+    public GameObject optionUI;
     public MouseLook mouseLook;
     private void Update()
     {
@@ -30,6 +31,7 @@ public class PauseMenu : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             pauseUI.SetActive(false);
+            optionUI.SetActive(false);
         }
         else
         {

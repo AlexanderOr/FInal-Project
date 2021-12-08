@@ -6,6 +6,7 @@ public class healheart : MonoBehaviour
 {
 
     public health HpUp;
+    public GameObject hpsound;
 
     
     private void OnTriggerEnter(Collider other)
@@ -19,16 +20,22 @@ public class healheart : MonoBehaviour
             {
                 Destroy(other.gameObject);
                 HpUp.HP++;
+                Vector3 audioSpawnpoint = other.transform.position;
+                Instantiate(hpsound, audioSpawnpoint, Quaternion.identity);
             }
             if (other.gameObject.name == "heart_case (1)")
             {
                 HpUp.HP++;
                 Destroy(other.gameObject);
+                Vector3 audioSpawnpoint = other.transform.position;
+                Instantiate(hpsound, audioSpawnpoint, Quaternion.identity);
             }
             if (other.gameObject.name == "heart_case (2)")
             {
                 HpUp.HP++;
                 Destroy(other.gameObject);
+                Vector3 audioSpawnpoint = other.transform.position;
+                Instantiate(hpsound, audioSpawnpoint, Quaternion.identity);
             }
         }
     }
