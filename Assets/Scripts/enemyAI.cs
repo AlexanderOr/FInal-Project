@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class enemyAI : MonoBehaviour
 {
+
+    public float starttime = 5f;
+    float currenttime = 0f;
     public NavMeshAgent agent;
     public GameObject hitsound;
     public Transform Player;
@@ -30,12 +33,18 @@ public class enemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
     }
+    private void Start()
+    {
+        currenttime = starttime;
+    }
 
     private void Update()
     {
         //check if player is in range
         insight = Physics.CheckSphere(transform.position, sightrange, whatIsPlayer);
         inattack = Physics.CheckSphere(transform.position, attackrange, whatIsPlayer);
+
+        currenttime -= 1 * Time.deltaTime;
 
         if (!insight && !inattack) Patroling();
         if (insight && !inattack) chase();
@@ -51,9 +60,16 @@ public class enemyAI : MonoBehaviour
 
         Vector3 distancetopoint = transform.position - walkpoint;
 
+        if (currenttime <= 0)
+        {
+            currenttime = starttime;
+            walkpointset = false;
+        }
+
         //walk point reached
         if (distancetopoint.magnitude < 1f)
             walkpointset = false;
+      
 
     }
     private void searchwalkpoint()

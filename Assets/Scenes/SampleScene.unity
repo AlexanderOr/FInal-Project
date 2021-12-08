@@ -4066,7 +4066,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360568356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.62, z: 0}
+  m_LocalPosition: {x: 0, y: 1.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4765,6 +4765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd475c41632bac4a953936ac93bff9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  starttime: 15
   agent: {fileID: 1496632629}
   hitsound: {fileID: 1377587280796213768, guid: 725fe25a2142a664c8fbccb9f53bdf47, type: 3}
   Player: {fileID: 762772589}
@@ -4776,9 +4777,9 @@ MonoBehaviour:
     m_Bits: 256
   playerHealth: {fileID: 17000219}
   walkpoint: {x: 0, y: 0, z: 0}
-  walkpointrange: 20
-  timebetweenattacks: 4
-  sightrange: 4
+  walkpointrange: 5
+  timebetweenattacks: 2
+  sightrange: 2
   attackrange: 0.2
   insight: 0
   inattack: 0
@@ -5233,6 +5234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd475c41632bac4a953936ac93bff9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  starttime: 15
   agent: {fileID: 1572677112}
   hitsound: {fileID: 1377587280796213768, guid: 725fe25a2142a664c8fbccb9f53bdf47, type: 3}
   Player: {fileID: 762772589}
@@ -5244,9 +5246,9 @@ MonoBehaviour:
     m_Bits: 256
   playerHealth: {fileID: 17000219}
   walkpoint: {x: 0, y: 0, z: 0}
-  walkpointrange: 10
-  timebetweenattacks: 4
-  sightrange: 3
+  walkpointrange: 5
+  timebetweenattacks: 2
+  sightrange: 1
   attackrange: 0.2
   insight: 0
   inattack: 0
@@ -6144,6 +6146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd475c41632bac4a953936ac93bff9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  starttime: 15
   agent: {fileID: 1859848346}
   hitsound: {fileID: 1377587280796213768, guid: 725fe25a2142a664c8fbccb9f53bdf47, type: 3}
   Player: {fileID: 762772589}
@@ -6155,9 +6158,9 @@ MonoBehaviour:
     m_Bits: 256
   playerHealth: {fileID: 17000219}
   walkpoint: {x: 0, y: 0, z: 0}
-  walkpointrange: 20
-  timebetweenattacks: 4
-  sightrange: 4
+  walkpointrange: 5
+  timebetweenattacks: 2
+  sightrange: 2
   attackrange: 0.2
   insight: 0
   inattack: 0
@@ -6256,7 +6259,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1.52
   m_Speed: 3
-  m_Acceleration: 2
+  m_Acceleration: 1
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -6279,6 +6282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd475c41632bac4a953936ac93bff9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  starttime: 15
   agent: {fileID: 1879604311}
   hitsound: {fileID: 1377587280796213768, guid: 725fe25a2142a664c8fbccb9f53bdf47, type: 3}
   Player: {fileID: 762772589}
@@ -6290,9 +6294,9 @@ MonoBehaviour:
     m_Bits: 256
   playerHealth: {fileID: 17000219}
   walkpoint: {x: 0, y: 0, z: 0}
-  walkpointrange: 10
-  timebetweenattacks: 4
-  sightrange: 3
+  walkpointrange: 5
+  timebetweenattacks: 2
+  sightrange: 1
   attackrange: 0.2
   insight: 0
   inattack: 0
